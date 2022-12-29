@@ -3,14 +3,13 @@
     flex: 0 0 auto;
     order: 1;
 
-    padding: 32px 32px 32px 16px;
+    padding: 32px 0 32px 16px;
     white-space: nowrap;
-    max-width: 250px;
-    overflow-x: hidden;
+    width: 250px;
+    border-right: 1px solid @col-border;
 
     a, a:active, a.visited {
-        display: block;
-        margin-left: 20px;
+        display: inline-block;
         padding: 3px 0;
         text-decoration: none;
         color: @col-text;
@@ -22,6 +21,7 @@
 
     .active > a {
         font-weight: bold;
+        color: @col-text-hover;
     }
 
     .indicator {
@@ -42,6 +42,7 @@
 
     .item {
         clear: left;
+        width: 100%;
 
         &.open > .indicator img {
             transform: rotate(90deg);
@@ -69,12 +70,13 @@
     }
 
     .label {
-        margin: 0 0 0 4px;
+        padding-right: 16px;
     }
 
     .content {
         margin: 0;
         padding: 0 0 0 20px;
+        width: 100%;
     }
 
     .summary {

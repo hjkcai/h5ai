@@ -1,5 +1,7 @@
 #view.view-details {
 
+    margin-bottom: 32px;
+
     .view-details-sized(@size) {
 
         .item {
@@ -23,8 +25,6 @@
         }
     }
 
-    margin: 32px;
-
     .header {
         position: relative;
         white-space: nowrap;
@@ -35,7 +35,7 @@
         .label, .date, .size {
             .eased-transition;
             line-height: 24px;
-            padding: 0px 8px 16px 8px;
+            padding: 8px;
             opacity: 0.4;
             outline: 0;
 
@@ -56,21 +56,20 @@
 
         .ascending .sort {
             display: inline;
+            transform: rotate(180deg);
         }
 
         .descending .sort {
             display: inline;
-            transform: rotate(180deg);
             zoom: 1;
         }
     }
 
     .item {
         overflow: hidden;
-        border-bottom: 1px solid rgba(0,0,0,0.07);
+        border-bottom: 1px solid @col-border;
 
         &:hover {
-            .raised;
             z-index: 1;
         }
 
@@ -98,13 +97,13 @@
 
     .date {
         position: absolute;
-        right: 116px;
+        right: 128px;
         top: 0;
     }
 
     .size {
         position: absolute;
-        right: 16px;
+        right: 24px;
         top: 0;
     }
 
